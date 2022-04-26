@@ -61,10 +61,10 @@ Please find the link in the Live Demo section.
 
 👤 **Imran Belete** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
-  - GitHub: [![GitHub Badge]](https://github.com/iBel251)
-  - Twitter: [![Twitter Badge]](https://twitter.com/ImranBel251)
-  - LinkedIn: [![LinkedIn Badge]](https://www.linkedin.com/in/imran-belete/)
-  - Gmail: [![Gmail Badge]](mailto:ibbimran7@gmail.com)
+  - [GitHub](https://github.com/iBel251)
+  - [Twitter](https://twitter.com/ImranBel251)
+  - [LinkedIn](https://www.linkedin.com/in/imran-belete/)
+  - [Gmail](mailto:ibbimran7@gmail.com)
 
 ## 🤝 Contributing
 
