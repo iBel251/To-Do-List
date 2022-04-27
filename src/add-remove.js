@@ -34,6 +34,7 @@ function menuListener() {
         menuBtn.classList.remove('delete-icon', `delete-icon${item.index}`, 'fa-trash-can');
       } else {
         taskDisc.setAttribute('contenteditable', true);
+        taskDisc.classList.add('yellowish');
         menuBtn.classList.remove('menu-icon', 'fa-ellipsis-vertical', `menu-icon${item.index}`);
         menuBtn.classList.add('delete-icon', `delete-icon${item.index}`, 'fa-trash-can');
       }
@@ -44,6 +45,7 @@ function menuListener() {
         listContainer[item.index].description = newName;
         localStorage.setItem('container', JSON.stringify(listContainer));
       }
+      taskDisc.classList.remove('yellowish');
       taskDisc.setAttribute('contenteditable', false);
       menuBtn.classList.add('menu-icon', 'fa-ellipsis-vertical', `menu-icon${item.index}`);
       menuBtn.classList.remove('delete-icon', `delete-icon${item.index}`, 'fa-trash-can');
