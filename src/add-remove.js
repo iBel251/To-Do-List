@@ -14,7 +14,6 @@ const listDisplay = document.querySelector('.screen');
 
 function menuListener() {
   listContainer.forEach((item) => {
-    // const className = '.menuicon' + item.index;
     const taskView = document.querySelector(`.task${item.index}`);
     const menuBtn = document.querySelector(`.menu-icon${item.index}`);
     const taskDisc = document.querySelector(`.task-name${item.index}`);
