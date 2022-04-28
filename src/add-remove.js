@@ -1,4 +1,5 @@
-import {cleanListener} from './clear.js';
+import cleanListener from './clear.js';
+
 let listContainer = [];
 
 class Task {
@@ -60,7 +61,7 @@ function menuListener() {
   });
 }
 
-export function populate() {
+export default function populate() {
   const storedItems = JSON.parse(localStorage.getItem('container'));
   if (storedItems !== null) {
     listContainer = storedItems;
@@ -104,7 +105,7 @@ function addListener() {
   textField.addEventListener('keypress', (e) => {
     const textValue = document.getElementById('add-text');
     const taskInput = textValue.value;
-    if (e.keyCode === 13 && taskInput!== ""){
+    if (e.keyCode === 13 && taskInput !== '') {
       addTask(taskInput);
     }
   });
@@ -126,4 +127,3 @@ function deleteTask(id) {
 window.onload = () => {
   populate();
 };
-
