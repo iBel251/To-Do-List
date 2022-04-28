@@ -24,6 +24,11 @@ li:last-child {
   color: gray;
 }
 
+li:last-child:hover {
+  background-color: rgb(46, 45, 45);
+  color: white;
+}
+
 i {
   margin: auto 10px;
   opacity: 0.5;
@@ -43,7 +48,7 @@ input {
 }
 
 .yellowish {
-  background-color: rgb(228, 228, 192);
+  background-color: rgb(234, 234, 219);
 }
 
 .screen {

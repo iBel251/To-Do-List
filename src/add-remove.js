@@ -1,3 +1,4 @@
+import {cleanListener} from './clear.js';
 let listContainer = [];
 
 class Task {
@@ -59,7 +60,7 @@ function menuListener() {
   });
 }
 
-function populate() {
+export function populate() {
   const storedItems = JSON.parse(localStorage.getItem('container'));
   if (storedItems !== null) {
     listContainer = storedItems;
@@ -69,7 +70,7 @@ function populate() {
   ul.classList.add('list-holder');
   ul.innerHTML = `<li class="header">Today's To Do<i class="fa-solid fa-rotate"></i></li>
             <li>
-                <input type="text" id="add-text" class="add-text" placeholder="Add to your list">
+                <input type="text" id="add-text" class="add-text" placeholder="Add to your list" required>
                 <i class="fa-solid fa-angle-left"></i>
             </li>`;
   let itemNo = 0;
@@ -89,11 +90,12 @@ function populate() {
     ul.append(i);
     itemNo += 1;
   });
-
+  localStorage.setItem('container', JSON.stringify(listContainer));
   ul.innerHTML += '<li class="clear-text">Clear all completed</li>';
   listDisplay.appendChild(ul);
   addListener();
   menuListener();
+  cleanListener();
 }
 
 function addListener() {
@@ -102,7 +104,7 @@ function addListener() {
   textField.addEventListener('keypress', (e) => {
     const textValue = document.getElementById('add-text');
     const taskInput = textValue.value;
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && taskInput!== ""){
       addTask(taskInput);
     }
   });
@@ -124,3 +126,4 @@ function deleteTask(id) {
 window.onload = () => {
   populate();
 };
+
