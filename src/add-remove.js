@@ -2,7 +2,7 @@ import cleanListener from './clear.js';
 
 let listContainer = [];
 
-export default class Task {
+export class Task {
   constructor(disc) {
     this.index = 0;
     this.completed = false;
@@ -60,7 +60,7 @@ function menuListener() {
   });
 }
 
-export function populate() {
+export default function populate() {
   const storedItems = JSON.parse(localStorage.getItem('container'));
   if (storedItems !== null) {
     listContainer = storedItems;
