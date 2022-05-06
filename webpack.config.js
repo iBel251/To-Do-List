@@ -13,6 +13,7 @@ module.exports = {
     }),
   ],
   output: {
+    publicPath: '/To-Do-List/',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
