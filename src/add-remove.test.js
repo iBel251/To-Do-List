@@ -1,12 +1,10 @@
 const myModules = require('./add-remove.js');
-const addTask = myModules.addTask;
-const deleteTask = myModules.deleteTask;
-let listContainer = myModules.listContainer;
-const Task = myModules.Task;
+
+let {addTask, deleteTask, listContainer} = myModules;
 
 describe('my tasks list', () => {
 
-  // Test for adding tasks to the array as an object
+// Test for adding tasks to the array as an object
   test('test: add 3 tasks', () => {
     addTask('Work');
     addTask('Code');
@@ -20,4 +18,3 @@ describe('my tasks list', () => {
     expect(listContainer).toHaveLength(2);
   });
 });
-
