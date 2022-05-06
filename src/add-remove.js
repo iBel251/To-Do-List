@@ -112,7 +112,7 @@ function addListener() {
 
 function addTask(taskInput) {
   const newTask = new Task(taskInput);
-  if(listContainer.length > 0) {
+  if (listContainer.length > 0) {
     newTask.index = listContainer.length;
   }
   listContainer.push(newTask);
@@ -127,7 +127,7 @@ window.onload = () => {
   populate();
 };
 
-//export {Task,listContainer};
+// export {Task,listContainer};
 module.exports = {};
 module.exports.addTask = addTask;
 module.exports.deleteTask = deleteTask;
