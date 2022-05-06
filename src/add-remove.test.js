@@ -8,9 +8,9 @@ describe('my tasks list', () => {
 
   // Test for adding tasks to the array as an object
   test('test: add 3 tasks', () => {
-    addTask('task1');
-    addTask('task2');
-    addTask('task3');
+    addTask('Work');
+    addTask('Code');
+    addTask('Sleep');
     expect(listContainer[1].description).toBe('task2');
   });
 
@@ -20,3 +20,4 @@ describe('my tasks list', () => {
     expect(listContainer).toHaveLength(2);
   });
 });
+
