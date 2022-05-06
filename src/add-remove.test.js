@@ -1,4 +1,6 @@
-const myModules = require('./add-remove.js');
+import * as myModules from './add-remove.js';
+
+jest.mock('./add-remove');
 
 let { listContainer } = myModules;
 const { addTask, deleteTask } = myModules;
