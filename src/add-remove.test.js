@@ -1,10 +1,10 @@
 const myModules = require('./add-remove.js');
 
-let {addTask, deleteTask, listContainer} = myModules;
-
+let { listContainer } = myModules;
+const { addTask, deleteTask } = myModules;
 describe('my tasks list', () => {
 
-// Test for adding tasks to the array as an object
+  // Test for adding tasks to the array as an object
   test('test: add 3 tasks', () => {
     addTask('Work');
     addTask('Code');
