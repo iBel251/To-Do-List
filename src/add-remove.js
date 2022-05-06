@@ -2,7 +2,7 @@ import cleanListener from './clear.js';
 
 let listContainer = [];
 
-class Task {
+export default class Task {
   constructor(disc) {
     this.index = 0;
     this.completed = false;
@@ -60,7 +60,7 @@ function menuListener() {
   });
 }
 
-export default function populate() {
+export function populate() {
   const storedItems = JSON.parse(localStorage.getItem('container'));
   if (storedItems !== null) {
     listContainer = storedItems;
@@ -112,17 +112,24 @@ function addListener() {
 
 function addTask(taskInput) {
   const newTask = new Task(taskInput);
+  if(listContainer.length > 0) {
+    newTask.index = listContainer.length;
+  }
   listContainer.push(newTask);
-  localStorage.setItem('container', JSON.stringify(listContainer));
-  populate();
 }
 
 function deleteTask(id) {
   listContainer = listContainer.filter((item) => item.index !== id);
-  localStorage.setItem('container', JSON.stringify(listContainer));
-  populate();
+  return listContainer;
 }
 
 window.onload = () => {
   populate();
 };
+
+//export {Task,listContainer};
+module.exports = {};
+module.exports.addTask = addTask;
+module.exports.deleteTask = deleteTask;
+module.exports.listContainer = listContainer;
+module.exports.Task = Task;
