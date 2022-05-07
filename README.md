@@ -66,6 +66,14 @@ Please find the link in the Live Demo section.
   - [LinkedIn](https://www.linkedin.com/in/imran-belete/)
   - [Gmail](mailto:ibbimran7@gmail.com)
 
+
+👤 **Victor Damola**
+
+>- GitHub: [@V0pe](https://github.com/V0pe)
+>- Twitter: [@de_vope_](https://twitter.com/de_vope)
+>- LinkedIn: [Victor Damola](https://linkedin.com/in/victor-damola-aderibigbe-27931ab0)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
